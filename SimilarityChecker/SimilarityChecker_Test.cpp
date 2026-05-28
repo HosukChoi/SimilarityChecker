@@ -16,8 +16,12 @@ TEST_F(SimilarityCheckerFixture, CheckStringLengthFullScore) {
 	check_calc_length_score(60, "ASD", "DSA");
 }
 
-TEST_F(SimilarityCheckerFixture, CheckStringLengthZeroScore) {
+TEST_F(SimilarityCheckerFixture, CheckStringLengthZeroScore1) {
 	check_calc_length_score(0, "A", "BB");
+}
+
+TEST_F(SimilarityCheckerFixture, CheckStringLengthZeroScore2) {
+	check_calc_length_score(0, "AAAAAA", "B");
 }
 
 TEST_F(SimilarityCheckerFixture, CheckStringLengthLowScore1) {
