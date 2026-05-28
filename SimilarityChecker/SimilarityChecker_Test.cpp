@@ -36,6 +36,20 @@ TEST_F(SimilarityCheckerFixture, CheckStringLengthLowScore2) {
 	check_calc_length_score(30, "AA", "AAE");
 }
 
-TEST_F(SimilarityCheckerFixture, CheckStringAlphabetScore) {
-	check_calc_alphabet_score(0, "", "");
+
+TEST_F(SimilarityCheckerFixture, CheckStringAlphabetFullScore1) {
+	check_calc_alphabet_score(40, "ASD", "DSA");
+}
+
+TEST_F(SimilarityCheckerFixture, CheckStringAlphabetFullScore2) {
+	check_calc_alphabet_score(40, "AAABB", "BA");
+}
+
+TEST_F(SimilarityCheckerFixture, CheckStringAlphabetZeroScore) {
+	check_calc_alphabet_score(0, "A", "BB");
+}
+
+
+TEST_F(SimilarityCheckerFixture, CheckStringAlphabetNormalScore) {
+	check_calc_alphabet_score(20, "AA", "AAE");
 }
