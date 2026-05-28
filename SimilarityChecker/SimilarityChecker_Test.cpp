@@ -15,3 +15,15 @@ public:
 TEST_F(SimilarityCheckerFixture, CheckStringLengthFullScore) {
 	check_calc_length_score(60, "ASD", "DSA");
 }
+
+TEST_F(SimilarityCheckerFixture, CheckStringLengthZeroScore) {
+	check_calc_length_score(0, "A", "BB");
+}
+
+TEST_F(SimilarityCheckerFixture, CheckStringLengthLowScore1) {
+	check_calc_length_score(20, "AAABB", "BAA");
+}
+
+TEST_F(SimilarityCheckerFixture, CheckStringLengthLowScore2) {
+	check_calc_length_score(30, "AA", "AAE");
+}
