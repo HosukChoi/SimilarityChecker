@@ -12,6 +12,6 @@ public:
 	}
 };
 
-TEST_F(SimilarityCheckerFixture, CheckStringLength) {
-	check_calc_length_score(0, "", "");
+TEST_F(SimilarityCheckerFixture, CheckStringLengthFullScore) {
+	check_calc_length_score(60, "ASD", "DSA");
 }
