@@ -141,7 +141,10 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SimilarityChecker.cpp" />
-    <ClCompile Include="SimilarityChecker_Test.cpp" />
+    <ClCompile Include="SimilarityChecker_Test.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
