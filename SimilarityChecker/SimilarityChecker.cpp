@@ -15,4 +15,8 @@ public:
 		return std::max(0,static_cast<int>(
 			double(1.0 - (gap / double(short_length))) * 60.0));
 	}
+
+	int CalcAlphabetScore(string str1, string str2) {
+		return 0;
+	}
 };

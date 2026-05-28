@@ -10,6 +10,10 @@ public:
 		int score = _similarity_checker.CalcLengthScore(str1, str2);
 		EXPECT_EQ(expect, score);
 	}
+	void check_calc_alphabet_score(int expect, string str1, string str2) {
+		int score = _similarity_checker.CalcAlphabetScore(str1, str2);
+		EXPECT_EQ(expect, score);
+	}
 };
 
 TEST_F(SimilarityCheckerFixture, CheckStringLengthFullScore) {
@@ -30,4 +34,8 @@ TEST_F(SimilarityCheckerFixture, CheckStringLengthLowScore1) {
 
 TEST_F(SimilarityCheckerFixture, CheckStringLengthLowScore2) {
 	check_calc_length_score(30, "AA", "AAE");
+}
+
+TEST_F(SimilarityCheckerFixture, CheckStringAlphabetScore) {
+	check_calc_alphabet_score(0, "", "");
 }
